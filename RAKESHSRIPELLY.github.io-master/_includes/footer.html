@@ -1,0 +1,49 @@
+<head>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <style>
+    #p1{
+      font-size: 10px;
+      margin-bottom: 10px;
+    }
+    #icon-up{
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      background-color: white;
+      color: black;
+      top: -30px;
+      line-height: 35px;
+      font-size: 18px;
+      left: 46.5%;
+    }
+
+    #icon-up:hover{
+      background-color: black;
+      color: #ffa51f;
+    }
+    @media only screen and (min-width: 550px) {
+    #p1{
+      font-size: larger;
+      margin-bottom: 17px;
+    }
+    #icon-up{
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      line-height: 50px;
+      top: -40px;
+      left: 48.5%;
+    }
+    }
+  </style>
+</head>
+<footer class="footer">
+<a href="#" data-scroll><i id = "icon-up" class="fas fa-chevron-up" style="margin-top: 15px;" aria-hidden="true"></i></a>
+  <p id = "p1">made with jekyll❤️ and hosted on GitHub</p>
+  {% include social_links.html %}
+</footer>
+<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
+{% include google-analytics.html %}

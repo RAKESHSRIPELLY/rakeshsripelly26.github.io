@@ -1,0 +1,38 @@
+<style>
+p{
+  margin-bottom: 23px;
+}
+</style>
+<div class="user-details">
+  <h1> Projects </h1>
+</div>
+
+{% for project in site.Projects %}
+
+  <div class="user-projects">
+    {% assign remainder = forloop.index | modulo: 2 %}
+    {% if remainder == 1 %}
+      <div class="images-left">
+        <img alt="mountains" src={{project.img}} />
+      </div>
+      <div class="contents-right">
+        <h3> {{project.title}} - <span style="font-size: large;">{{project.subtitle}}</span> </h3>
+        <p>{{project.description}}</p>
+        <a class="project-link" target="_blank" href="{{project.source_url}}">Source Code <i id="icon" class="fa fa-file-code" style="font-size:20px;"></i></a>
+      </div>
+    {% else %}
+      <div class="images-right">
+        <img alt="mountains" src={{project.img}} />
+      </div>
+      <div class="contents">
+        <h3> {{project.title}} - <span style="font-size: large;">{{project.subtitle}}</span> </h3>
+        <p>{{project.description}}</p>
+        <a class="project-link" target="_blank" href="{{project.source_url}}">Source Code <i id="icon" class="fa fa-file-code" style="font-size:20px;"></i></a>
+      </div>
+    {% endif%}
+  </div>
+
+{% endfor %}
+
+
+</div>
